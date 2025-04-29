@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="nft_description_page">Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img class="navbar-brand-logo" src="resources/logo.png">
+                <a class="navbar-brand-name" href="">ART OF GRADA</a>
+            </div>
+            <div class="navbar-collapse">
+                <div class="navbar-search">
+                    <div class="search-box">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                <div class="navbar-items">
+                    <ul>
+                        <li class="dropdown">
+                            <a id="dropdownToggleProfile"><i class="fas fa-user"></i></a>
+                            <div class="dropdown-content-profile">
+                                <a href="" >
+                                    <i class="fab fa-ethereum"></i>
+                                    <span data-lang="nav_item_profile_login">Login</span>
+                                </a>
+                                <a href="">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span data-lang="nav_item_profile_link">Profile</span>
+                                </a>
+                                <a href="">
+                                    <i class="fas fa-thumbs-up"></i> 
+                                    <span data-lang="nav_item_profile_liked">Liked</span>
+                                </a>
+                                <a href="">
+                                    <i class="fas fa-wallet"></i>
+                                    <span data-lang="nav_item_profile_owned">Owned</span></a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a id="dropdownToggleCalculator"><i class="fas fa-calculator"></i></a>
+                            <div class="dropdown-content-calculator">
+                                <div class="calculator-container">
+                                    <div class="calculator-inputs">
+                                        <input type="number" value="Enter amount" id="currency-input"><i class="fab fa-ethereum"></i>
+                                    </div>
+                                    <div class="calculator-inputs">
+                                        <input type="number" value="Result" id="currency-output" readonly>
+                                        <select id="currency-select">
+                                            <option value="kzt">KZT</option>
+                                            <option value="usdt">USDT</option>
+                                            <option value="rub">RUB</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a><i class="fas fa-plus"></i></a></li>
+                        <li class="dropdown">
+                            <a id="dropdownToggleCart"><i class="fas fa-shopping-cart" style="-webkit-text-stroke: 1px rgb(255, 255, 255);color: transparent;"></i></a>
+                            <div class="dropdown-content-cart">
+                                <div class="cart-card-header">
+                                    <h1>Your Cart</h1>
+                                    <a><i class="fas fa-times"></i></a>
+
+                                </div>
+                                <div class="cart-card-items">
+                                    <h3>2 items</h3>
+                                    <a>Clear all</a>
+                                </div>
+                                <div class="cart-card-nfts">
+                                    <div class="cart-card-nfts-image">
+                                        <img src="resources/image (2).png">
+                                    </div>
+                                    <div class="cart-card-nfts-content">
+                                        <div class="cart-card-nfts-authors">
+                                            <p>Author</p>
+                                            <p>Grada</p>
+                                        </div>
+                                        <p>0.001 ETH</p>
+                                    </div>
+                                </div>
+                                <button class="cart-card-confirm-button">Complete Purchase</button>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a id="dropdownToggleLang"><i class="fas fa-globe"></i></a>
+                            <div class="dropdown-content-lang">
+                                <a data-btn="ru">
+                                    <img src="resources/russia.svg" class="language-images">
+                                    Русский
+                                </a>
+                                <a data-btn="en">
+                                    <img src="resources/en.svg" class="language-images">
+                                    English
+                                </a>
+                                <a data-btn="kz">
+                                    <img src="resources/kazakh.png" class="language-images">
+                                    Қазақ
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nft-container">
+        <div class="nft-information">
+            <img class="border-oyu" src="resources/oyu2.png">
+            <div class="nft-image">
+                <img  src="resources/image (2).png">
+                <p>Created Apr 2024 | Chain Ethereum</p>
+            </div>
+            <div class="nft-information-container">
+                <div>
+                    <h1 data-lang="nft_description_container_title">NFT name</h1>   
+                    <p data-lang="nft_description_container_author">Author or Collection name</p>
+                    <p data-lang="nft_description_container_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                
+                
+                <div class="nft-information-below-section">
+                    <p></p>
+                    <div class="nft-information-button">
+                        <button class="buy-button" data-lang="nft_description_container_order_btn">Place a bid</button>
+                        <button class="like-button"><i class="far fa-heart" style="-webkit-text-stroke: 1px rgb(255, 255, 255);color: transparent;"></i></button>
+                        <button class="add-to-cart-button"><i class="fas fa-shopping-cart" style="-webkit-text-stroke: 1px rgb(255, 255, 255);color: transparent;"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>Join the community</p>
+            <div class="footer-social-media-links">
+                <ul>
+                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-discord"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-contact-text">Contacts: +012 3456789</div>
+            <div class="footer-email-text">Email: artofgrada@gmail.com</div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lang.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+.all-cards{
+    margin: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.backgr{
+    width: 280px;
+    margin-top: 20px;
+}
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.cards{
+    display: flex;
+    gap: 30px;
+}
+
+
+.card{
+    background-color: #282434;
+    width: 322px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+
+img{ 
+    transition: .5s ease-in-out;
+
+}
+.card:hover img{
+    transform: translateY(-5px);
+}
+.card:hover{
+    background-color: #333044;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 87%;
+    margin-top: -10px;
+    gap: 130px
+}
+
+.author{
+    display: flex;
+    flex-direction: column;
+}
+
+.author h4{
+    font-size: 20px;
+    font-weight: 500;
+    color: lightgray
+}
+
+.author span{
+    margin-top: -20px;
+    color: white;
+    font-weight: 600;
+    font-size: 16;
+}
+
+.price{
+    display: flex;
+    flex-direction: column;
+}
+
+.price h4{
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 30px;
+    color: lightgray;
+    text-align: end;
+}
+
+.price span{
+    margin-top: -8px;
+    color: white;
+    font-weight: 600;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 87%;
+    margin-top: 13px;
+}
+
+.place{
+    height: 35px;
+    width: 176px;
+    border-radius: 10px;
+    border: none;
+    background-image: linear-gradient(to right top, #00E0FF, #671AE4);
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+.favorite, .cart{
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    border: none;
+    background-image: linear-gradient(to right top, #00E0FF, #671AE4);
+}
+
+svg{
+    height: 15px;
+    margin-top: 5px;
+}
+
+
+.categories{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.category, .prices{
+    padding: 5px 10px;
+    background-color: #282434;
+    border-radius: 10px;
+}
+
+select{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+
+

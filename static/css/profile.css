@@ -1,0 +1,893 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: none;
+}
+.dropdown-menu {
+  padding: 1vh 0;
+  display: none;
+  position: absolute;
+  left: -600%;
+  top: 100%;
+  margin-top: 2vh;
+  border-radius: 10px;
+  background: linear-gradient(225deg, #2f2e3d, #606068a4);
+  min-width: 15vw;
+  z-index: 1;
+  margin-left: 30vh;
+}
+
+.dropdown-menu a {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 3vh;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  padding: 1vh 2vh;
+}
+
+.dropdown-menu a i {
+  width: 2vw;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu a .language-images {
+  width: 1.2vw;
+  margin-right: 1vw;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background-color: #0d0c19; /* Your background color */
+  background-image: url("../assets/output-onlinepngtools.png"); /* Your background image */
+  background-size: 25vw; /* Set the size of the background image */
+  background-repeat: repeat; /* Repeat the background image both horizontally and vertically */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  /* overflow: hidden; */ 
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* nav {
+  height: 50px;
+  background-color: #151521; 
+  padding: 50px 20px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-aligned {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.left-aligned h1 {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.search-bar {
+  width: 436px;
+  height: 48px;
+  transform: translateX(-20px);
+  display: flex;
+  margin: 0 10px;
+}
+
+#search-text {
+  font-size: 20px;
+}
+
+.search-bar-icon {
+  margin-top: 15px;
+  height: 17px;
+  width: auto;
+  transform: translateX(20px);
+  position: fixed;
+}
+
+.search-bar input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.buttons {
+  display: flex;
+  margin-right: 20px;
+  justify-content: flex-end; 
+  align-items: center; 
+  gap: 15px; 
+}
+
+.logo {
+  background-color: #2f9bff;
+  margin-right: 10px; /
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /
+  overflow: hidden;
+}
+
+.logo img {
+  filter: hue-rotate(180deg);
+  width: 100%; 
+  height: auto; 
+}
+
+.search-bar {
+  position: relative;
+  z-index: 9999;
+  width: 436px;
+  height: 48px;
+  transform: translateX(-20px);
+  display: flex;
+  margin: 0 10px;
+}
+
+.search-bar input[type="search"] {
+  position: relative; 
+  z-index: 9999; 
+  font-family: Poppins, sans-serif;
+  padding-left: 50px;
+  width: 100%;
+  border-radius: 11px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  background: linear-gradient(
+    to right,
+    rgba(128, 128, 128, 0.671),
+    rgba(128, 128, 128, 0.075)
+  );
+}
+.search-bar input[type="search"]::placeholder {
+  color: rgb(145, 145, 145);
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.buttons {
+  margin-right: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  z-index: 10001;
+}
+
+.buttons button {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  margin-left: 10px; 
+  padding: 8px 12px; 
+  border-radius: 10px;
+  background: linear-gradient(
+    to right,
+    #606068,
+    #60606869
+  ); 
+  color: white; 
+  border: none; 
+  cursor: pointer; 
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons img {
+  height: 80%;
+  width: auto;
+}
+NAVBAR END */
+.main {
+  position: relative;
+  z-index: 0;
+}
+
+.profile-card,
+.artwork-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  top: -10vh;
+  z-index: -10;
+  margin-top: 60px;
+}
+
+.union-container {
+  position: relative;
+  width: 92%;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+}
+
+.union,
+.center-image,
+.profile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.center-image {
+  width: 24%;
+  position: absolute;
+  top: 37%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-image {
+  width: 13.5%;
+  position: absolute;
+  top: 36.5%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+
+.username {
+  position: absolute;
+  top: 70%;
+  left: 49%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.profile-info {
+  position: absolute;
+  bottom: 20px; /* Adjust the distance from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.profile-info p {
+  color: white;
+  font-size: 16px;
+  margin: 0 10px; /* Add spacing between elements */
+}
+
+.profile-info p span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.profile-info p:not(:last-child)::after {
+  content: "|"; /* Add separator between items */
+  color: white;
+  margin-left: 5px;
+}
+
+.additional-info {
+  position: absolute;
+  top: 74%;
+  right: 95px;
+  transform: translateY(-50%);
+}
+
+.info-item {
+  padding: 5px;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 10px; /* Add bottom margin between items */
+}
+
+.info-item span {
+  font-weight: bold;
+  display: inline-block; /* Display span as block to separate from value */
+}
+
+.info-item span::after {
+  content: ":"; /* Add colon after span */
+  margin-right: 5px; /* Add spacing between span and value */
+}
+
+.description {
+  position: absolute;
+  width: 30%;
+  top: 52%; /* Adjust the vertical position */
+  left: 50px; /* Adjust the horizontal position */
+  z-index: 1000; /* Ensure the description is above other elements */
+  color: white;
+  font-size: 20px;
+}
+
+/* SETTINGS  */
+
+.settings-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -200px;
+  padding: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+  z-index: 1000;
+}
+
+/* SETTINGS LEFT SIDE GOES HERE */
+.settings-sidebar button {
+  background-color: rgba(85, 85, 85, 0.397);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  border-radius: 15px;
+  padding: 14px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  width: 80%;
+  text-align: center;
+  margin: 4px;
+  margin-left: 24px;
+  text-decoration-line: none;
+}
+
+.f-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.s-and-t-button {
+  margin-bottom: 20px;
+}
+
+.settings-sidebar {
+  border-radius: 15px;
+  background-color: rgba(
+    85,
+    85,
+    85,
+    0.26
+  ); /* Adjust the last value (0.3) for transparency */
+  width: 15%;
+  height: auto;
+  margin-right: 10px;
+}
+a.a_title {
+  color: azure;
+  text-decoration: none;
+}
+.active {
+  background: linear-gradient(10deg, #4f0065, #33a7ff);
+}
+
+/* SETTING RIGHT SIDE PART GOES HERE! */
+.settings-main,
+.artworks-main,
+.owned-main,
+.liked-main {
+  border-radius: 15px;
+  flex-grow: 1;
+  padding: 20px;
+  background-color: rgba(85, 85, 85, 0.26);
+  width: 84%;
+  height: 890px;
+}
+
+/* PROGILE INFORMATION GOES HERE! */
+.settings-main form,
+.owned-main form,
+.liked-main form,
+.artworks-main form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.form-group textarea {
+  background-color: rgba(85, 85, 85, 0.555);
+  width: 903px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-left: 50px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+  font-size: 18px;
+}
+.form-group input {
+  width: 400px;
+  margin-right: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px;
+  background-color: rgba(85, 85, 85, 0.555);
+}
+
+.form-group select {
+  width: 400px; /* Adjust the width as needed */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px;
+  background-color: rgba(85, 85, 85, 0.555);
+}
+
+.form-group:focus-within label {
+  font-weight: bolder;
+}
+
+input,
+select,
+textarea {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+textarea:focus,
+input:focus {
+  color: #ffffff;
+}
+
+.settings-main button,
+.owned-main button,
+.liked-main button,
+.artworks-main button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  width: 18%;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+/* USER UNFO GOES HERE! */
+
+.user-info {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: left; /* Align items horizontally */
+  margin-left: 50px;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+.carousel-but {
+  background-color: rgba(32, 31, 41, 0.26);
+}
+.div-but {
+  margin-left: 20vw;
+}
+
+.user-info p {
+  margin-top: 0; /* Remove default margin */
+  color: white;
+  margin-left: 26px;
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  margin-top: -18px;
+}
+
+.top-buttons button {
+  background-color: rgba(85, 85, 85, 0.397);
+  flex: 0 0 auto;
+  padding: 14px 20px; /* Adjust padding as needed */
+}
+
+.top-buttons button:first-child {
+  width: 200px;
+  margin-left: 0px;
+}
+
+.top-buttons button:last-child {
+  margin-left: 0px; /* Pushes the last button to the right */
+  width: 558px;
+  margin-right: 44px;
+}
+
+button.NFTs {
+  margin-left: 0px; /* Pushes the last button to the right */
+  width: 200px;
+}
+
+.top-buttons button:hover {
+  background: linear-gradient(10deg, #4f0065, #33a7ff);
+  color: #fff; /* Text color on hover */
+}
+
+.top-buttons button:hover a {
+  color: #fff; /* Link text color on hover */
+  text-decoration: none;
+}
+
+.nft-cards-grid1,
+.nft-cards-grid2,
+.nft-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-auto-rows: auto; /* Auto height */
+  gap: 20px; /* Spacing between cards */
+  width: 100%;
+}
+
+.card {
+  width: 250px;
+  height: 320px;
+  box-shadow: 0rem 0.3rem 0.3rem 0rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.171);
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 1.4rem 1.1rem 1.3rem;
+  box-sizing: border-box;
+}
+
+.card .rectangle-23 {
+  border-radius: 0.6rem;
+  background-image: url("../assets/rectangle23.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 0 0.8rem 0;
+  flex-grow: 1;
+}
+
+.card .group-56,
+.card .group-57 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.card .author,
+.card .current-bid {
+  font-family: "Poppins";
+  font-weight: medium;
+  font-size: 13px;
+  color: #fff;
+}
+
+.card .title {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+  width: 65%;
+}
+
+.card .eth {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 24px;
+}
+
+.footer-social-media-links ul {
+  display: flex;
+  padding: 0 20px;
+  list-style: none;
+  gap: 4vw;
+  color: #fff;
+}
+
+.footer-social-media-links ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-social-media-links ul li a:hover {
+  color: rgb(255, 0, 0);
+}
+@media (max-width: 768px) {
+  .profile-card,
+  .artwork-grid {
+    position: relative;
+    z-index: 1;
+  }
+  .settings-sidebar {
+    border-radius: 15px;
+    background-color: rgba(
+      85,
+      85,
+      85,
+      0.26
+    ); /* Adjust the last value (0.3) for transparency */
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+  }
+  .settings-main,
+  .liked-main,
+  .owned-main,
+  .artworks-main {
+    border-radius: 15px;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: rgba(85, 85, 85, 0.26);
+    width: auto;
+    height: 1200px;
+  }
+
+  .profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    top: -10vh;
+    z-index: -10;
+    margin-top: 60px;
+    width: 350%;
+    margin-left: 90px;
+    margin-bottom: 200px;
+    margin-top: 200px;
+  }
+
+  .union-container {
+    position: relative;
+    width: 92%;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+  }
+
+  .union,
+  .center-image,
+  .profile-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+
+  .center-image {
+    width: 24%;
+    position: absolute;
+    top: 37%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+  }
+
+  .profile-image {
+    width: 13.5%;
+    position: absolute;
+    top: 36.5%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+  }
+
+  .username {
+    position: absolute;
+    top: 70%;
+    left: 49%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 38px;
+    font-weight: 700;
+  }
+
+  .profile-info {
+    position: absolute;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  .profile-info p {
+    color: white;
+    font-size: 16px;
+    margin: 0 10px; /* Add spacing between elements */
+  }
+
+  .profile-info p span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .profile-info p:not(:last-child)::after {
+    content: "|"; /* Add separator between items */
+    color: white;
+    margin-left: 5px;
+  }
+
+  .additional-info {
+    position: absolute;
+    top: 74%;
+    right: 100px;
+    transform: translateY(-50%);
+  }
+
+  .info-item {
+    padding: 5px;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px; /* Add bottom margin between items */
+  }
+
+  .info-item span {
+    font-weight: bold;
+    display: inline-block; /* Display span as block to separate from value */
+  }
+
+  .info-item span::after {
+    content: ":"; /* Add colon after span */
+    margin-right: 5px; /* Add spacing between span and value */
+  }
+
+  .description {
+    position: absolute;
+    width: 30%;
+    top: 52%; /* Adjust the vertical position */
+    left: 50px; /* Adjust the horizontal position */
+    z-index: 1000; /* Ensure the description is above other elements */
+    color: white;
+    font-size: 20px;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    width: 400%;
+    height: 400%;
+    margin-top: 200%;
+  }
+  .dropdown-menu {
+    padding: 1vh 0;
+    display: none;
+    position: absolute;
+    left: -600%;
+    top: 100%;
+    margin-top: 2vh;
+    border-radius: 10px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1)
+    );
+    min-width: 15vw;
+    z-index: 1;
+    margin-left: 30vh;
+  }
+
+  .dropdown-menu a {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 3vh;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    padding: 1vh 2vh;
+  }
+
+  .dropdown-menu a i {
+    width: 2vw;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .dropdown-menu a .language-images {
+    width: 1.2vw;
+    margin-right: 1vw;
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 16px;
+  }
+
+  .footer-social-media-links ul {
+    display: flex;
+    padding: 0 10px;
+    list-style: none;
+    gap: 2vw;
+    color: #fff;
+  }
+
+  .footer-social-media-links ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .footer-social-media-links ul li a:hover {
+    color: rgb(255, 0, 0);
+  }
+}
+
+.user-photo { 
+  background-color: #262629;
+  width: 200px; /* Adjust as necessary */
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user-photo i {
+  color: white;
+}
+
+.user-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.user-photo input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
