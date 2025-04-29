@@ -7,9 +7,10 @@ import os
 
 app = Flask(__name__, template_folder='.')
 
-app.secret_key = os.environ.get("SECRET_KEY")
+app.secret_key = "your_secret_key"
 
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+# MongoDB config
+app.config["MONGO_URI"] = "mongodb+srv://spaceman2204:bQX60c9y2DRttDab@cluster0.amtp0za.mongodb.net/Matker?retryWrites=true&w=majority"
 mongo = PyMongo(app)
 
 login_manager = LoginManager()
