@@ -5,21 +5,17 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from bson import ObjectId
 import os
 
-# Tell Flask to look for templates in the *current* directory
 app = Flask(__name__, template_folder='.')
 
-app.secret_key = "your_secret_key"
+app.secret_key = os.environ.get("SECRET_KEY")
 
-# MongoDB config
-app.config["MONGO_URI"] = "mongodb+srv://spaceman2204:bQX60c9y2DRttDab@cluster0.amtp0za.mongodb.net/Matker?retryWrites=true&w=majority"
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
-# Flask-Login config
 login_manager = LoginManager()
 login_manager.login_view = "login"
 login_manager.init_app(app)
 
-# User model
 class User(UserMixin):
     def __init__(self, user_data):
         self.id = str(user_data["_id"])
@@ -56,13 +52,10 @@ def register():
         nickname = request.form["nickname"]
         metamask_account = request.form["metamask_account"]
 
-        # Check if the username already exists
         existing_user = mongo.db.Users.find_one({"username": username})
         if existing_user is None:
-            # Encrypt the password
             hash_pass = generate_password_hash(password)
             
-            # Insert the user data into MongoDB
             user_id = mongo.db.Users.insert_one({
                 "username": username,
                 "password": hash_pass,
@@ -71,7 +64,6 @@ def register():
                 "metamask_account": metamask_account
             }).inserted_id
 
-            # Get the inserted user data
             user = mongo.db.Users.find_one({"_id": user_id})
             login_user(User(user))
             return redirect(url_for("index"))
